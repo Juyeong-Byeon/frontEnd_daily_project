@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.gallery {
+    display: grid;
+    /*
+    grid-template-columns: 1fr;//한 프레임이 하나의 칼럼을 모두 차지
+     grid-template-columns: 1fr 1fr;// 두 프레임이 한 칼럼을 모두 차지
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    repeat(반복 횟수, 반복될 단위);
+    minmax(400px,lfr) 최소 400px
+     */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    min-height: 100vh;
+    grid-gap: 2rem;
+}
+
+.image-container {
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+
+.image-container img:hover {
+    transform: scale(1.2);
+}
+
+.modal {
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*포인터가 다른 것들을 만지지 못하도록함*/
+    pointer-events: none;
+    transition: all 0.25s ease-out;
+}
+
+.modal p {
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+}
+
+.modal.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.full-image {
+    position: absolute;
+    width: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: all 0.25s ease-out;
+}
+
+.full-image.open {
+    transform: translate(-50%, -50%) scale(1);
+}
