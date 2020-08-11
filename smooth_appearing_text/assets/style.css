@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+}
+
+header .header-image {
+    width: 100vw;
+    height: 100vh;
+}
+
+.intro {
+    margin: 1rem 0 1rem 3rem;
+}
+
+.intro-content {
+    width: 100vw;
+}
+
+.intro-content .intro-text {
+    float: left;
+    width: 25vw;
+    margin: 3rem 1rem 10rem 3rem;
+}
+
+.intro-content img {
+    margin: 3rem 3rem 3rem 20vw;
+    width: 30vw;
+}
+
+.intro-text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s all ease-in-out;
+}
+
+.intro-appear {
+    opacity: 1;
+    transform: translateY(0px);
+}
