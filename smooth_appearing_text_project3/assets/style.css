@@ -8,7 +8,7 @@ header .header-image {
 }
 
 .intro {
-    margin: 1rem 0 1rem 3rem;
+    margin: 3rem 0 1rem 10vh;
 }
 
 .intro-content {
@@ -18,7 +18,7 @@ header .header-image {
 .intro-content .intro-text {
     float: left;
     width: 25vw;
-    margin: 3rem 1rem 10rem 3rem;
+    margin: 3rem 1rem 10rem 10vh;
 }
 
 .intro-content img {
@@ -30,6 +30,10 @@ header .header-image {
     opacity: 0;
     transform: translateY(20px);
     transition: 0.5s all ease-in-out;
+}
+
+.intro-text p {
+    margin-top: 1rem;
 }
 
 .intro-appear {
